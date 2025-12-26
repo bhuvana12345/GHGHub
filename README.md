@@ -90,10 +90,6 @@ For each problem, the extension creates:
 - **Permissions**: storage, activeTab, scripting
 - **Host Permissions**: GeeksforGeeks domains, GitHub API
 
-## License
-
-MIT License
-
 ## Author
 
 Created by Bhuvana Korrapati

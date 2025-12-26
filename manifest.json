@@ -1,0 +1,39 @@
+{
+  "name": "GFGHub - GeeksforGeeks to GitHub",
+  "version": "1.0.0",
+  "description": "Automatically sync your GeeksforGeeks solutions to GitHub",
+  "manifest_version": 3,
+  "icons": {
+    "16": "assets/icon-16.png",
+    "48": "assets/icon-48.png",
+    "128": "assets/icon-128.png"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://practice.geeksforgeeks.org/*",
+    "https://*.geeksforgeeks.org/*",
+    "https://api.github.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://practice.geeksforgeeks.org/*", "https://*.geeksforgeeks.org/*"],
+      "js": ["scripts/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icon-16.png",
+      "48": "assets/icon-48.png",
+      "128": "assets/icon-128.png"
+    }
+  },
+  "background": {
+    "service_worker": "scripts/background.js"
+  }
+}
